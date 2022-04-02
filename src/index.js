@@ -1,7 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import "./index.css";
-import HomePage from "./components/pages/Homepage";
+import HomePage from "./components/pages/HomePage";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import DayList from "./components/DayList";
 import DayPage from "./components/pages/DayPage";

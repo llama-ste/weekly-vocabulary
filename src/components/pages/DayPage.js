@@ -84,7 +84,7 @@ const DayPage = () => {
     <DayWrapper>
       <h2>Day {params.day}</h2>
       <table>
-        <tbody>{word}</tbody>
+        <tbody>{!noWord ? word : ""}</tbody>
       </table>
       {noWord && <NoWordPage />}
     </DayWrapper>

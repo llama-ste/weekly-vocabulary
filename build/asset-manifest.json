@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/weekly-vocabulary/static/css/main.99df8ee6.css",
-    "main.js": "/weekly-vocabulary/static/js/main.d90443e2.js",
+    "main.js": "/weekly-vocabulary/static/js/main.3349a4c6.js",
     "index.html": "/weekly-vocabulary/index.html",
     "main.99df8ee6.css.map": "/weekly-vocabulary/static/css/main.99df8ee6.css.map",
-    "main.d90443e2.js.map": "/weekly-vocabulary/static/js/main.d90443e2.js.map"
+    "main.3349a4c6.js.map": "/weekly-vocabulary/static/js/main.3349a4c6.js.map"
   },
   "entrypoints": [
     "static/css/main.99df8ee6.css",
-    "static/js/main.d90443e2.js"
+    "static/js/main.3349a4c6.js"
   ]
 }

@@ -2,6 +2,37 @@ import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 
+const DUMMY_DAY = [
+  {
+    id: 1,
+    day: 1,
+  },
+  {
+    id: 2,
+    day: 2,
+  },
+  {
+    id: 3,
+    day: 3,
+  },
+  {
+    id: 4,
+    day: 4,
+  },
+  {
+    id: 5,
+    day: 5,
+  },
+  {
+    id: 6,
+    day: 6,
+  },
+  {
+    id: 7,
+    day: 7,
+  },
+];
+
 const List = styled.ul`
   list-style: none;
   padding: 0;
@@ -57,10 +88,10 @@ const DayList = () => {
     adviceApi();
   }, []);
 
-  const day = [1, 2, 3, 4, 5, 6, 7].map((day) => {
+  const day = DUMMY_DAY.map((day) => {
     return (
-      <li key={day}>
-        <Link to={`/day/${day}`}>Day {day}</Link>
+      <li key={day.id}>
+        <Link to={`/day/${day.day}`}>Day {day.day}</Link>
       </li>
     );
   });
