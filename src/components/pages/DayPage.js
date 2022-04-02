@@ -68,7 +68,7 @@ const DayPage = () => {
 
   let storedWord = JSON.parse(localStorage.getItem("json"));
 
-  if (storedWord.length === 0 || storedWord === null) {
+  if (storedWord === null) {
     localStorage.setItem("json", JSON.stringify([]));
     storedWord = [];
   }
