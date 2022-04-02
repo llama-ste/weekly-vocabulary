@@ -1,17 +1,23 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import React from "react";
+import ReactDOM from "react-dom";
+import "./index.css";
+import HomePage from "./components/pages/Homepage";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import DayList from "./components/DayList";
+import DayPage from "./components/pages/DayPage";
+import EmptyPage from "./components/pages/EmptyPage";
+import NewWordPage from "./components/pages/NewWordPage";
 
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
+  <BrowserRouter>
+    <Routes>
+      <Route path="/" element={<HomePage />}>
+        <Route path="/" element={<DayList />} />
+        <Route path="day/:day" element={<DayPage />} />
+        <Route path="new_word" element={<NewWordPage />} />
+        <Route path="*" element={<EmptyPage />} />
+      </Route>
+    </Routes>
+  </BrowserRouter>,
+  document.getElementById("root")
 );
-
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
