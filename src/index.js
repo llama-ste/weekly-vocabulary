@@ -9,7 +9,7 @@ import EmptyPage from "./components/pages/EmptyPage";
 import NewWordPage from "./components/pages/NewWordPage";
 
 ReactDOM.render(
-  <BrowserRouter>
+  <BrowserRouter basename={process.env.PUBLIC_URL}>
     <Routes>
       <Route path="/" element={<HomePage />}>
         <Route path="/" element={<DayList />} />
