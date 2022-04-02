@@ -2,6 +2,7 @@ import styled from "styled-components";
 
 const LayoutWrapper = styled.div`
   padding-top: 1rem;
+  padding-bottom: 1rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
