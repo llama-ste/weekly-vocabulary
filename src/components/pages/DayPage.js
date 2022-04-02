@@ -83,9 +83,7 @@ const DayPage = () => {
   return (
     <DayWrapper>
       <h2>Day {params.day}</h2>
-      <table>
-        <tbody>{!noWord ? word : ""}</tbody>
-      </table>
+      <table>{!noWord ? <tbody>{word}</tbody> : ""}</table>
       {noWord && <NoWordPage />}
     </DayWrapper>
   );
