@@ -66,7 +66,12 @@ const DayWrapper = styled.div`
 const DayPage = () => {
   const params = useParams();
 
-  const storedWord = JSON.parse(localStorage.getItem("json"));
+  let storedWord = JSON.parse(localStorage.getItem("json"));
+
+  if (storedWord.length === 0 || storedWord === null) {
+    localStorage.setItem("json", JSON.stringify([]));
+    storedWord = [];
+  }
 
   const filterDay = storedWord.filter((word) => {
     return word.day === params.day;
@@ -76,15 +81,17 @@ const DayPage = () => {
     return <Word key={word.id} word={word} />;
   });
 
-  const noWord = word.length === 0;
-
-  console.log(noWord);
+  const listLen = word.length === 0;
 
   return (
     <DayWrapper>
       <h2>Day {params.day}</h2>
-      <table>{!noWord ? <tbody>{word}</tbody> : ""}</table>
-      {noWord && <NoWordPage />}
+      {!listLen ? (
+        <table>
+          <tbody>{word}</tbody>
+        </table>
+      ) : null}
+      {listLen && <NoWordPage />}
     </DayWrapper>
   );
 };
